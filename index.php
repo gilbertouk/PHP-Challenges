@@ -11,10 +11,10 @@
 <body>
     <div>
     <?php 
-        $numChallenges = 3;
-        echo "<h4>Selecione abaixo a lista de exercicios que quer acessar.</h4><br>";
+        $numChallenges = 100;
+        echo "<h4>Selecione abaixo a lista de exercicios que quer acessar.</h4>";
         for ($i=1; $i <= $numChallenges; $i++) { 
-            echo "<li><a href='challenge-$i/challenge-$i.php'>Challenge - $i</a></li>";
+            echo "<a href='challenge-$i/challenge-$i.php'>Challenge - $i</a><br>";
         }        
     ?>   
     </div> 
