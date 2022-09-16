@@ -25,7 +25,7 @@
                 $valorComDesconto = $valor - $desconto;
                 echo "Valor do produto: R$" . number_format($valor, 2, '.', ',') . "<br>";
                 echo "Desconto 5%: R$" . number_format($desconto, 2, '.', ',') . "<br>";
-                echo "Valor do produto: R$" . number_format($valorComDesconto, 2, '.', ',') . "<br>";
+                echo "Valor do produto com desconto: R$" . number_format($valorComDesconto, 2, '.', ',') . "<br>";
             }
             voltar();
         ?>
