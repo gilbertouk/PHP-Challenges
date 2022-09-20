@@ -11,12 +11,26 @@
 <body>
     <div>
     <?php 
-        $numChallenges = 100;
         echo "<h4>Selecione abaixo a lista de exercicios que quer acessar.</h4>";
+
+        $numChallenges = 100;
+
         for ($i=1; $i <= $numChallenges; $i++) { 
-            echo "<a href='challenge-$i/challenge-$i.php'>Challenge - $i</a><br>";
+            $caminhoArquivo = 'challenge-'. $i . '\\challenge-' . $i . '.php';
+            $caminhoArquivo = str_replace('\\', DIRECTORY_SEPARATOR, $caminhoArquivo);
+            
+            if(file_exists($caminhoArquivo)){
+                echo "<a href='$caminhoArquivo'>Challenge - $i</a><br>";
+            }            
         }        
     ?>   
     </div> 
 </body>
 </html>
+
+
+
+
+
+
+
