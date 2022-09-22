@@ -7,6 +7,10 @@
 </head>
 <body>
     <div>
+        <form action="challenge-17.php" method="get">
+            Informe a velocidade do carro em Km: <input type="number" name="km" id="km"><br>
+            <input type="submit" value="Verificar">
+        </form>
         <?php
             require_once '../__includes/funcoes.php';
             /*
@@ -15,7 +19,15 @@
             o valor da multa, cobrando R$5 por cada Km acima da velocidade permitida.
             */
 
+            $km = $_GET['km'] ?? 0;
             
+            if($km <= 80){
+                echo "Velocidade permitida";
+            } else {
+                $valorMulta = ($km - 80) * 5;
+                echo "Voce estava acima da velocidade permitida 80km/h e foi multado em R$: " . number_format($valorMulta, 2);
+            }
+
             voltar();
         ?>
     </div>
