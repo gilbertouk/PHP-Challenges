@@ -13,6 +13,7 @@
         </form>
         <?php
             require_once '../__includes/funcoes.php';
+            
             /*
             18) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade
             dela e depois mostre se ela pode ou não votar.
@@ -21,7 +22,6 @@
             $ano = $_GET['ano'] ?? null;
             if(is_null($ano)){
                 echo "Voce deve informar seu ano de nascimento.";
-                exit();
             } else {
                 $idade = date('Y') - $ano;
                 echo "Sua idade e: " . $idade . "<br>";
@@ -33,8 +33,7 @@
                 } else {
                     echo "Seu voto e obrigatorio!";
                 }
-            }            
-
+            }
             voltar();
         ?>
     </div>
