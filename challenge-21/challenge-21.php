@@ -8,7 +8,7 @@
 <body>
     <div>
         <form action="challenge-21.php" method="get">
-            Informe o Ano que deseja verificar: <input type="number" name="ano" id="ano"><br>
+            Informe o Ano que deseja verificar: <input type="number" name="year" id="year"><br>
             <input type="submit" value="Verificar">
         </form>
         <?php
@@ -18,21 +18,21 @@
             BISSEXTO.
             */
 
-            function verificaAnoBissexto(int $ano): string
+            function verificaAnoBissexto(int $year): string
             {
-                if (($ano % 4) == 0 && ($ano % 100) <> 0) {
-                    $mensagem = "O ano de $ano é BISSEXTO. <br>";
-                } elseif ($ano % 400 == 0) {
-                    $mensagem = "O ano de $ano é BISSEXTO. <br>";
+                if (($year % 4) == 0 && ($year % 100) <> 0) {
+                    $mensagem = "O ano de $year é BISSEXTO. <br>";
+                } elseif ($year % 400 == 0) {
+                    $mensagem = "O ano de $year é BISSEXTO. <br>";
                 } else {
-                    $mensagem = "O ano de $ano não é BISSEXTO. <br>";
+                    $mensagem = "O ano de $year não é BISSEXTO. <br>";
                 }
                 return $mensagem;
             }
 
-            $ano = $_GET['ano'] ?? 0;
+            $year = $_GET['year'] ?? 0;
 
-            echo verificaAnoBissexto($ano);
+            echo verificaAnoBissexto($year);
 
             voltar();
         ?>
