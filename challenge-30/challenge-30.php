@@ -63,7 +63,7 @@
             } else {
                 if (verificaLadosTriangulo($ladoA, $ladoB, $ladoC)) {
                     echo "<p>Os lados informados $ladoA, $ladoB e $ladoC é possível formar um triângulo com essas medidas.</p>";
-                    echo "<p>E o tipo de triângulo que sera formado com essas medidas é: " . verificaTipoDeTriangulo($ladoA, $ladoB, $ladoC) . "</p>";
+                    echo "<p>E o modelo de triângulo que sera formado com essas medidas é: " . verificaTipoDeTriangulo($ladoA, $ladoB, $ladoC) . "</p>";
                 } else {
                     echo "<p>Os lados informados $ladoA, $ladoB e $ladoC nao é possível formar um triângulo com essas medidas.</p>";
                 }
