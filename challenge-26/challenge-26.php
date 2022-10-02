@@ -21,6 +21,29 @@
             * - O segundo valor é o maior
             * - Não existe valor maior, os dois são iguais
             */
+
+            function verificaValores(int $valorA, $valorB): string
+            {
+                if ($valorA > $valorB) {
+                    $mensagem = "<p>O primeiro valor \"$valorA\" é o maior.</p>";
+                } elseif ($valorB > $valorA) {
+                    $mensagem = "<p>O segundo valor \"$valorB\" é o maior.</p>";
+                } else {
+                    $mensagem = "<p>Não existe valor maior, os dois são iguais.</p>";
+                }
+                return $mensagem;
+            }
+
+            $valorA = $_GET['valorA'] ?? 0;
+            $valorB = $_GET['valorB'] ?? 0;
+
+            if ($valorA == null || $valorB == null) {
+                voltar();
+                exit();
+            } else {
+                echo verificaValores($valorA, $valorB);
+            }
+
             voltar();
         ?>
     </div>
